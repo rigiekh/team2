@@ -16,13 +16,39 @@ void PrintArray(int[] col)
     int position = 0;
     while (position < count)
     {
-         Console.WriteLine(col[position]);
-         position++;
+        Console.WriteLine(col[position]);
+        position++;
     }
 }
 
-int[] array = new int[10];
+int[] Method(int[] myArray)
+{
+    int length = myArray.Length;
+    int[] newArray = new int[] {};
+    for (int i = 0; i < myArray.Length; i++)
+    {
+        if (myArray[i] > 8)
+        {
+            newArray[i] = myArray[i];
+        }
+    }
+    return newArray;
+}
 
-FillArray(array);
-PrintArray(array);
+int[] newArray = Method(myArray);
 
+void PrintnewArray (int[] arr) 
+{
+    int count = arr.Length;
+    for (int i = 0; i < count ; i++)
+    {
+        if(arr[i]!=0) Console.Write($"{arr[i]} ");
+    }
+}
+
+
+FillArray(myArray);
+PrintArray(myArray);
+Console.WriteLine();
+Method(myArray);
+PrintnewArray(newArray);
